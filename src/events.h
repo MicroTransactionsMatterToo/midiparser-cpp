@@ -98,6 +98,16 @@ public:
 };
 
 
+/// Channel-wide aftertouch
+class ChannelAfterTouch {
+public:
+    uint8_t pressure;  /**<Pressure of after-touch */
+    uint8_t channel;   /**<Channel event applies to */
+    uint32_t time;     /**<MIDI timcode */
+
+    /// Constructor
+    ChannelAfterTouch(uint8_t pressure, uint32_t time, uint8_t channel);
+};
 
 
 #endif //MIDIPARSER_C_EVENTS_H
