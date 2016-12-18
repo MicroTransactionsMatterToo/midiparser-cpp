@@ -40,12 +40,12 @@ enum HeaderType {
 /// MIDI Pitch Wheel event
 class PitchWheelEvent {
 public:
-    uint8_t absolute;  /**<Absolute value of pitch */
-    uint8_t channel;   /**<Channel event applies to */
+    uint16_t absolute;  /**<Absolute value of pitch */
     int16_t relative;  /**<Relative value of pitch */
+    uint8_t channel;   /**<Channel event applies to */
 
     /// Constructor
-    PitchWheelEvent(uint8_t absolute, uint8_t channel);
+    PitchWheelEvent(uint16_t absolute, uint8_t channel);
 };
 
 

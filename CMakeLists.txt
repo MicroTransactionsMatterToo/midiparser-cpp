@@ -10,5 +10,5 @@ set(SOURCE_FILES
         src/components.cpp
         src/components.h
         src/operator_overrides.cpp
-        src/operator_overrides.h)
+        src/operator_overrides.h src/parsing.cpp src/parsing.h)
 ADD_LIBRARY(midiparser STATIC ${SOURCE_FILES})

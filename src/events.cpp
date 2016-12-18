@@ -7,7 +7,7 @@
 
 // Implementation of classes
 
-PitchWheelEvent::PitchWheelEvent(uint8_t absolute, uint8_t channel) :
+PitchWheelEvent::PitchWheelEvent(uint16_t absolute, uint8_t channel) :
         absolute(absolute), channel(channel) {
     relative = (uint16_t) (absolute - 0x2000);
 }
