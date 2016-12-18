@@ -51,5 +51,5 @@ ChannelAfterTouch::ChannelAfterTouch(uint8_t pressure, uint32_t time,
                                      uint8_t channel) :
         pressure(pressure),
         time(time),
-        channel(channel)
-{}
+        channel(channel) {}
+

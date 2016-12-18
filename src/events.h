@@ -28,6 +28,13 @@ enum TimeFormat {
 };
 
 
+/// Type of header
+enum HeaderType {
+    FILE_HEADER,  /**< MIDI file header */
+    TRACK_HEADER  /**< Track header */
+};
+
+
 // Class defs
 
 /// MIDI Pitch Wheel event
