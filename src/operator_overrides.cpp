@@ -1,3 +1,4 @@
+// Copyright Ennis Massey 16/12/16
 //
 // Created by Ennis Massey on 16/12/16.
 //
@@ -5,7 +6,7 @@
 #include "operator_overrides.h"
 
 
-std::ostream &operator<<(std::ostream &os, MIDIHeader const &obj) {
+std::ostream &operator<<(std::ostream &os, midiparser::MIDIHeader const &obj) {
     char temp_buffer[200];
     int error;
     error = snprintf(temp_buffer, sizeof(temp_buffer),
@@ -24,7 +25,7 @@ std::ostream &operator<<(std::ostream &os, MIDIHeader const &obj) {
     }
 }
 
-std::ostream &operator<<(std::ostream &os, TrackHeader const &obj) {
+std::ostream &operator<<(std::ostream &os, midiparser::TrackHeader const &obj) {
     char temp_buffer[200];
     int error;
     error = snprintf(temp_buffer, sizeof(temp_buffer),
@@ -40,7 +41,7 @@ std::ostream &operator<<(std::ostream &os, TrackHeader const &obj) {
     }
 }
 
-std::ostream &operator<<(std::ostream &os, NoteOn const &obj) {
+std::ostream &operator<<(std::ostream &os, midiparser::NoteOn const &obj) {
     char temp_buffer[200];
     int error;
     error = snprintf(temp_buffer, sizeof(temp_buffer),
@@ -57,7 +58,7 @@ std::ostream &operator<<(std::ostream &os, NoteOn const &obj) {
     }
 }
 
-std::ostream &operator<<(std::ostream &os, NoteOff const &obj) {
+std::ostream &operator<<(std::ostream &os, midiparser::NoteOff const &obj) {
     char temp_buffer[200];
     int error;
     error = snprintf(temp_buffer, sizeof(temp_buffer),
@@ -74,7 +75,7 @@ std::ostream &operator<<(std::ostream &os, NoteOff const &obj) {
     }
 }
 
-std::ostream &operator<<(std::ostream &os, PolyphonicAfterTouch const &obj) {
+std::ostream &operator<<(std::ostream &os, midiparser::PolyphonicAfterTouch const &obj) {
     char temp_buffer[200];
     int error;
     error = snprintf(temp_buffer, sizeof(temp_buffer),
@@ -91,7 +92,7 @@ std::ostream &operator<<(std::ostream &os, PolyphonicAfterTouch const &obj) {
     }
 }
 
-std::ostream &operator<<(std::ostream &os, ControlChange const &obj) {
+std::ostream &operator<<(std::ostream &os, midiparser::ControlChange const &obj) {
     char temp_buffer[200];
     int error;
     error = snprintf(temp_buffer, sizeof(temp_buffer),

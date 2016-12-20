@@ -1,3 +1,4 @@
+// Copyright Ennis Massey 18/12/16
 //
 // Created by Ennis Massey on 18/12/16.
 //
@@ -5,7 +6,7 @@
 #include "parsing.h"
 
 
-uint32_t ParseUint32(std::ifstream &input_file) {
+uint32_t midiparser::ParseUint32(std::ifstream &input_file) {
     // If the file isn't open, return 0
     if (!input_file.is_open()) {
         return (uint32_t) 0;
@@ -28,7 +29,7 @@ uint32_t ParseUint32(std::ifstream &input_file) {
 }
 
 
-uint32_t ParseUint24(std::ifstream &input_file) {
+uint32_t midiparser::ParseUint24(std::ifstream &input_file) {
     // If the file isn't open, return 0
     if (!input_file.is_open()) {
         return (uint32_t) 0;
@@ -49,7 +50,7 @@ uint32_t ParseUint24(std::ifstream &input_file) {
     return value;
 }
 
-uint16_t ParseUint16(std::ifstream &input_file) {
+uint16_t midiparser::ParseUint16(std::ifstream &input_file) {
     // If the file isn't open, return 0
     if (!input_file.is_open()) {
         return (uint16_t) 0;
@@ -68,7 +69,7 @@ uint16_t ParseUint16(std::ifstream &input_file) {
     return value;
 }
 
-uint8_t ParseUint7(std::ifstream &input_file) {
+uint8_t midiparser::ParseUint7(std::ifstream &input_file) {
     if (!input_file.is_open()) {
         return (uint8_t) 0;
     }
@@ -83,7 +84,7 @@ uint8_t ParseUint7(std::ifstream &input_file) {
     return value;
 }
 
-std::tuple<uint8_t, uint8_t> ParseTwoUint7(std::ifstream &input_file) {
+std::tuple<uint8_t, uint8_t> midiparser::ParseTwoUint7(std::ifstream &input_file) {
     if (!input_file.is_open()) {
         return std::make_tuple((uint8_t) 0, (uint8_t) 0);
     }
@@ -99,7 +100,7 @@ std::tuple<uint8_t, uint8_t> ParseTwoUint7(std::ifstream &input_file) {
     return value;
 }
 
-uint8_t ParseUint8(std::ifstream &input_file) {
+uint8_t midiparser::ParseUint8(std::ifstream &input_file) {
     if (!input_file.is_open()) {
         return (uint8_t) 0;
     }
@@ -111,7 +112,7 @@ uint8_t ParseUint8(std::ifstream &input_file) {
     return (uint8_t) buffer[0];
 }
 
-int8_t ParseInt8(std::ifstream &input_file) {
+int8_t midiparser::ParseInt8(std::ifstream &input_file) {
     if (!input_file.is_open()) {
         return (int8_t) 0;
     }
@@ -124,7 +125,7 @@ int8_t ParseInt8(std::ifstream &input_file) {
     return (int8_t) buffer[0];
 }
 
-uint16_t ParsePitchWheelValue(std::ifstream &input_file) {
+uint16_t midiparser::ParsePitchWheelValue(std::ifstream &input_file) {
     if (!input_file.is_open()) {
         return (uint16_t) 0;
     }
@@ -141,7 +142,7 @@ uint16_t ParsePitchWheelValue(std::ifstream &input_file) {
     return value;
 }
 
-uint32_t ParseVariableLengthValue(std::ifstream &input_file) {
+uint32_t midiparser::ParseVariableLengthValue(std::ifstream &input_file) {
     if (!input_file.is_open()) {
         return (uint32_t) 0;
     }

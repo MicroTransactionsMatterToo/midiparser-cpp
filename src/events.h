@@ -7,6 +7,10 @@
 
 #include "midiparser.h"
 
+// Namespace midiparser
+
+namespace midiparser {
+
 // Enums
 /**
  * The MIDI File type of the parsed file, e.g. Multi-track, Multi-file e.t.c
@@ -75,7 +79,8 @@ public:
     uint32_t time;      /**<MIDI timecode */
 
     /// Constructor
-    NoteOff(uint8_t pitch, uint8_t velocity, uint32_t time, uint8_t channel);
+    NoteOff(uint8_t pitch, uint8_t velocity, uint32_t time,
+            uint8_t channel);
 };
 
 /// Polyphonic after-touch MIDI message
@@ -115,6 +120,6 @@ public:
     /// Constructor
     ChannelAfterTouch(uint8_t pressure, uint32_t time, uint8_t channel);
 };
-
+}
 
 #endif //MIDIPARSER_C_EVENTS_H

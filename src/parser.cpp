@@ -1,3 +1,4 @@
+// Copyright Ennis Massey 21/12/16
 //
 // Created by Ennis Massey on 21/12/16.
 //
@@ -5,7 +6,7 @@
 #include "parser.h"
 
 
-Parser::Parser(const char *file_name) {
+midiparser::Parser::Parser(const char *file_name) {
     // Create new file variable
     midi_file.open(file_name,
                    std::ios_base::in | std::ios_base::binary);
@@ -22,7 +23,7 @@ Parser::Parser(const char *file_name) {
 }
 
 
-Parser::~Parser() {
+midiparser::Parser::~Parser() {
     if (midi_file.is_open()) {
         midi_file.close();
     }
