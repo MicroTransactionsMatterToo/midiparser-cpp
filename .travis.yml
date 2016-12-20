@@ -4,6 +4,9 @@ language: cpp
 compiler:
   - clang
   - gcc
+
+before_install:
+  - sudo apt-get update -qq
 # Build steps
 script:
   - mkdir build
