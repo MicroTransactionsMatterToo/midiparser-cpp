@@ -44,12 +44,12 @@ ControlChange::ControlChange(uint8_t controller, uint8_t value, uint32_t time,
                              uint8_t channel) :
         controller(controller),
         value(value),
-        time(time),
-        channel(channel) {}
+        channel(channel),
+        time(time) {}
 
 ChannelAfterTouch::ChannelAfterTouch(uint8_t pressure, uint32_t time,
                                      uint8_t channel) :
         pressure(pressure),
-        time(time),
-        channel(channel) {}
+        channel(channel),
+        time(time) {}
 
