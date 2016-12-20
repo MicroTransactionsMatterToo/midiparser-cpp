@@ -12,35 +12,37 @@
 // Namespace midiparser
 namespace midiparser {
 
-    enum LEX_STATE {
-        EXPECT_HEADER,
-        EXPECT_CHUNK,
-        EXPECT_TRACK_EVENT
-    };
+enum LEX_STATE {
+    EXPECT_HEADER,
+    EXPECT_CHUNK,
+    EXPECT_TRACK_EVENT
+};
 
-    class Parser {
-    public:
-        std::ifstream midi_file;
+class Parser {
+public:
+    std::ifstream midi_file;
 
-        /// Constructor
-        Parser(const char *file_name);
-        /// Deconstructor
-        ~Parser();
+    /// Constructor
+    Parser(const char *file_name);
 
-        /// Performs parsing
-        /*!
-         * Uses internally stored data and parses it, storing the
-         * parsed data in Parser.data
-         *
-         * error_code will be negative if an error occured, positive otherwise
-         * @return error_code
-         */
-        int Parse();
+    /// Deconstructor
+    ~Parser();
 
-    private:
-        LEX_STATE state_;
-        int ParseTrackEvent();
-    };
+    /// Performs parsing
+    /*!
+     * Uses internally stored data and parses it, storing the
+     * parsed data in Parser.data
+     *
+     * error_code will be negative if an error occured, positive otherwise
+     * @return error_code
+     */
+    int Parse();
+
+private:
+    LEX_STATE state_;
+
+    int ParseTrackEvent();
+};
 
 
 }

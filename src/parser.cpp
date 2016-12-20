@@ -14,7 +14,7 @@ midiparser::Parser::Parser(const char *file_name) {
     if (!midi_file.is_open()) {
         char temp[200];
         snprintf(temp, sizeof(temp), "Unable to open file: %s",
-                        file_name);
+                 file_name);
         midi_file.close();
         return;
     } else {

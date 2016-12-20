@@ -9,8 +9,9 @@
 
 
 /// Constructor
-midiparser::MIDIHeader::MIDIHeader(int32_t length, FileType type, int64_t time_division,
-                       int32_t number_of_tracks) :
+midiparser::MIDIHeader::MIDIHeader(int32_t length, FileType type,
+                                   int64_t time_division,
+                                   int32_t number_of_tracks) :
         length(length),
         type(type),
         time_division_(time_division) {
@@ -22,8 +23,6 @@ midiparser::MIDIHeader::MIDIHeader(int32_t length, FileType type, int64_t time_d
         exit(1);
     }
 }
-
-
 
 
 /// Constructor
